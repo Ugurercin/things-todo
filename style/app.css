@@ -9,10 +9,10 @@
 }
 
 body {
-  background: #0f0c29;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #6441A5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
 }
 
 .splash{
@@ -76,10 +76,6 @@ header {
 
 }
 
-ul{
-  list-style: none;
-}
-
 .container {
   height: 100vh;
   width: auto;
@@ -91,13 +87,79 @@ ul{
 
 }
 
-li {
+.todo h1{
+  border: 1px solid chocolate;
   color: white;
+  margin-bottom: 15px;
+  text-align: center;
+
 }
-.todo {
+.doing h1{
+  border: 1px solid chocolate;
+  color: white;
+  margin-bottom: 15px;
+  text-align: center;
+
+}
+.done h1{
+  border: 1px solid chocolate;
+  color: white;
+  margin-bottom: 15px;
+  text-align: center;
+
+}
+
+input.todo-input {
+  border: none;
+  background: transparent;
+  color: skyblue;
+  border-bottom: 1px solid white;
   
 }
 
+input.todo-input:focus {
+  border: none;
+  outline: none;
+}
+
+input:focus::placeholder {
+  border-bottom: 1px solid white;
+  color: transparent;
+  
+}
+
+::placeholder {
+  color: darkcyan;
+  
+}
+
+.todo-input-tick {
+  padding: 1px 4px 1px 4px;
+  border-radius: 9px;
+  background-color: silver;
+}
+
+.todo-input-moreInfo {
+  display: flex;
+  float: right;
+  color: red;
+}
+
+#todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 5px solid;
+  margin-top: 5px;
+  
+}
+
+.bi.bi-three-dots-vertical {
+  margin-top: 12px;
+  color: white;
+
+}
 
 
 
