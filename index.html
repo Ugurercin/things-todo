@@ -22,15 +22,26 @@
   <div class="container">
 
     <div class="todo">
-      <h1>To-do</h1>
-      <input class="todo-input" type="text" placeholder="Something" aria-label="Recipient's username">
-      <input class="todo-input-tick" type="button" value="✓" />
+      <div class="todo-header">
+      <h2>Todo</h2>
+      <input id="todo-input" class="todo-input" type="text" placeholder="Something" aria-label="Recipient's username">
+      <input id="todo-input-button" class="todo-input-tick" type="button" value="+" />
+    </div>
 
       <div class="card">
         <img src="./style/img/img_avatar.png" alt="Avatar" style="width:100%">
         <div class="card-container">
-          <h4><b>John Doe</b></h4>
-          <p>Architect & Engineer</p>
+          <h4><b>Wash the dishes</b></h4>
+          <p>low</p>
+          
+          <h5>DueDate</h5>
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-three-dots-vertical" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+          </svg>
+
+
         </div>
       </div>
 
@@ -38,25 +49,48 @@
 
     <div class="doing">
       <h1>Doing</h1>
-      <input class="todo-input" type="text" placeholder="Something" aria-label="Recipient's username">
-      <input class="todo-input-tick" type="button" value="✓" />
+      <input id="todo-input-doing" class="todo-input" type="text" placeholder="Something" aria-label="Recipient's username">
+      <input id="todo-input-button-doing" class="todo-input-tick" type="button" value="✓" />
 
-      <ul>
-        <li>Item1</li>
+      <div class="card">
+        <img src="./style/img/img_avatar.png" alt="Avatar" style="width:100%">
+        <div class="card-container">
+          <h4><b>Wash the dishes</b></h4>
+          <p>low</p>
+          <h5>DueDate</h5>
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-three-dots-vertical" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+          </svg>
 
 
-      </ul>
+        </div>
+      </div>
+
     </div>
 
     <div class="done">
       <h1>Done</h1>
-      <input class="todo-input" type="text" placeholder="Something" aria-label="Recipient's username">
-      <input class="todo-input-tick" type="button" value="✓" />
+      <input id="todo-input-done" class="todo-input" type="text" placeholder="Something" aria-label="Recipient's username">
+      <input id="todo-input-button-done" class="todo-input-tick" type="button" value="✓" />
 
-      <ul>
-        <li>Item1</li>
+      <div class="card">
+        <img src="./style/img/img_avatar.png" alt="Avatar" style="width:100%">
+        <div class="card-container">
+          <h4><b>Wash the dishes</b></h4>
+          <p>low</p>
+          <h5>DueDate</h5>
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-three-dots-vertical" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+          </svg>
 
-      </ul>
+
+        </div>
+      </div>
+
     </div>
 
 
