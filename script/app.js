@@ -24,10 +24,11 @@ class TodoItem{
 };
 
 let validateInputField = () => {
-  if(todoInput.value.length <= 0)
+  if(todoInput.value.length <= 0){
     alert("Please enter a todo")
-  location.reload();
-}
+    location.reload();
+  }
+};
 
 
 
