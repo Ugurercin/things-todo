@@ -15,6 +15,7 @@ body {
   
 }
 
+/**** SPLASH SCREEN ****/
 .splash{
   margin: 0;
   position: fixed;
@@ -65,7 +66,11 @@ body {
 .fade-in {
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
+
 }
+
+
+/**** HEADER ****/
 
 header {
   display: flex;
@@ -76,6 +81,8 @@ header {
 
 }
 
+
+/**** CONTAINER ****/
 .container {
   height: 100vh;
   width: auto;
@@ -83,14 +90,16 @@ header {
   display: flex;
   justify-content: space-around;
   font-family: 'Montserrat', sans-serif;
-  
 
 }
 
+
+/**** TODO CLASS ****/
 .todo-header {
   margin-top: 15px;
   color: white;
 }
+
 
 .todo h2{
   background-color:salmon;
