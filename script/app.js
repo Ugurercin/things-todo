@@ -7,21 +7,38 @@ document.addEventListener('DOMContentLoaded', e => {
   }, 1);
 })
 
-const todoUserInput = document.getElementById("todo-input");
-const todoUserInputButton = document.getElementById('todo-input-button');
+const todoInput = document.getElementById('todo-input');
+const todoInputButton = document.getElementById('todo-input-button');
 
-
-class TodoItem {
-  constructor(image, todo, priority, initilDate, dueDate, state) {
-    this.image = image;
-    this.todo = todo;
-    this.priority = priority;
-    this.initilDate = initilDate;
-    this.dueDate = dueDate;
-    this.state = state;
+class TodoItem{
+  constructor(id,task, priorty, createDate, dueDate, state, image) {
+    this.todoId = id;
+    this.todoTask = task;
+    this.todoPriorty = priorty;
+    this.todoCreationDate = createDate;
+    this.todoDueDate = dueDate;
+    this.todoState = state;
+    this.todoImage = image;
   }
   
+};
+
+let validateInputField = () => {
+  if(todoInput.value.length <= 0)
+    alert("Please enter a todo")
+  location.reload();
 }
+
+
+
+function createTodoItem() {
+  validateInputField();
+  
+}
+
+
+
+todoInputButton.addEventListener('click', createTodoItem);
 
 
 
