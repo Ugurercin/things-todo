@@ -10,18 +10,21 @@ document.addEventListener('DOMContentLoaded', e => {
 const todoInput = document.getElementById('todo-input');
 const todoInputButton = document.getElementById('todo-input-button');
 
-class TodoItem extends createTodoCard{
-  constructor(id,task, priorty, createDate, dueDate, state, image) {
-    this.todoId = id;
-    this.todoTask = task;
-    this.todoPriorty = priorty;
-    this.todoCreationDate = createDate;
-    this.todoDueDate = dueDate;
-    this.todoState = state;
-    this.todoImage = image;
-  }
+let todoItem = [
+  {
+    "todoId": generateID,
+    "todoTask": todoInput.value,
+    "todoPriority": "low", //Need handler
+    "todoCreationDate": getTodoCreationDate,
+    "todoDueDate": "20.02.2021", // Need handler
+    "todoState": "doing",//Need handler
+    "todoImage": null //Need handler
+  
+  },
 
-};
+
+
+];
 
 let validateInputField = () => {
   if(todoInput.value.length <= 0){
