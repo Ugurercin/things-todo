@@ -44,12 +44,18 @@ const getTodoCreationDate = () => {
 function todoTargetState(){
   const target = this.event.target;
   const parent = target.previousElementSibling;
-  return parent;
+  const parentId = parent.getAttribute("id")
+  const state = parentId.split("-").pop(); // returns the exact state (todo-doing-done)
+  
+  const parentDiv = parent.closest(`.${state}`)
+  console.error(parent)
+  console.error(parentDiv)
+  return [parent, parentDiv];
 };
 
 
 function createTodoDiv(){
-  const mainDiv = document.querySelector(".todo");
+  
 };
 
 
@@ -57,11 +63,7 @@ function createTodoDiv(){
 function createTodoObject(event) {
   const target = todoTargetState(this.event)
   
-  console.error(target);
-
   
-
-
   createTodoDiv;
   validateInputField;
   todoItem.push({
