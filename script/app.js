@@ -6,27 +6,16 @@ document.addEventListener('DOMContentLoaded', e => {
   }, 1);
 })
 
-
-const todoInput = document.getElementById('todo-input');
 const todoInputButton = document.getElementById('todo-input-button');
+const todoInput = document.getElementById('todo-input');
 
-let todoItem = [
-  {
-    "todoId": generateID,
-    "todoTask": todoInput.value,
-    "todoPriority": "low", //Need handler
-    "todoCreationDate": getTodoCreationDate,
-    "todoDueDate": "20.02.2021", // Need handler
-    "todoState": "doing",//Need handler
-    "todoImage": null //Need handler
-  
-  },
+
+let todoItem = [];
 
 
 
-];
 
-let validateInputField = () => {
+const validateInputField = () => {
   if(todoInput.value.length <= 0){
     alert("Please enter a todo")
     location.reload();
@@ -34,46 +23,31 @@ let validateInputField = () => {
 };
 
 
-let generateID = () => {
+const generateID = () => {
   return Math.floor(Math.random() * 100); 
 }
 
-let getTodoCreationDate = () => {
+const getTodoCreationDate = () => {
   return [month, date, year] = (new Date()).toLocaleDateString().split("/")
 }
 
-function createTodoParams() {
-  validateInputField();
+function createTodoObject() {
+  validateInputField;
+
+  todoItem.push({
+    todoId: generateID(),
+    todoTask: todoInput.value,
+    todoCreationDate: getTodoCreationDate(),
+    todoDueDate: "20.02.2021",
+    todoPriority: "low",
+    todoState: "doing"
+  });
   
-  const todoId = generateID();
-  const creationDate = getTodoCreationDate();
-  const todoTask = todoInput.value;
-
-  populateTodoItem(todoId, todoTask, creationDate.toString());
-
-
-
-}
-
-function populateTodoItem(id,task, date){
-  const todoItem = new TodoItem(id, task, "low", date);
-
-  
-  
+  return todoItem;
 }
 
 
-function createTodoCard(){
-
-  const container = document.querySelector(".container");
-  const div = document.createElement('div');
-  div.classList = "card";
-  
-
-}
-
-
-todoInputButton.addEventListener('click', createTodoParams);
+todoInputButton.addEventListener('click', createTodoObject);
 
 
 
