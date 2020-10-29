@@ -46,7 +46,6 @@ function todoTargetState(){
   const parent = target.previousElementSibling;
   const parentId = parent.getAttribute("id")
   const state = parentId.split("-").pop(); // returns the exact state (todo-doing-done)
-  
   const parentDiv = parent.closest(`.${state}`)
   console.error(parent)
   console.error(parentDiv)
@@ -54,33 +53,70 @@ function todoTargetState(){
 };
 
 
-function createTodoDiv(){
+function createTodoCard(){
+  const cardDiv = document.createElement('div');
+  cardDiv.classList = "card";
   
+  const img = document.createElement('img');
+  img.src = "";
+  img.alt = "avatar";
+  img.style = "width:100%";
+
+  cardDiv.appendChild(img);
+
+  return cardDiv;
+
 };
+
+
+function createTodoCardContainer(){
+  const todoCard = createTodoCard();
+  const cardContainer = document.createElement('div');
+  cardContainer.classList = "card-container";
+
+  let elements = [];
+
+  const h4 = document.createElement('h4');
+  const p = document.createElement('p');
+  const h5 = document.createElement('h5');
+
+  elements.push(h4,p,h5);
+  
+  for (element of elements) {
+    cardContainer.appendChild(element);
+  }
+  
+  cardContainer.appendChild(h4,p,h5);
+
+   todoCard.append(cardContainer);
+
+  
+  return todoCard;
+
+}
+
+
 
 
 
 function createTodoObject(event) {
-  const target = todoTargetState(this.event)
-  
-  
-  createTodoDiv;
-  validateInputField;
   todoItem.push({
     todoId: generateID(),
     todoTask: todoInput.value,
     todoCreationDate: getTodoCreationDate(),
+    todoImage: "",
     todoDueDate: "20.02.2021",
     todoPriority: "low",
     todoState: "doing"
   });
   
-  return todoItem;
-};
-
-
-function createTodoCard(){
-
+  
+  const target = todoTargetState(event);
+  
+  validateInputField();
+  createTodoCard();
+  createTodoCardContainer();
+  
 };
 
 
